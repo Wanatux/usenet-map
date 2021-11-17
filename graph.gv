@@ -1,10 +1,9 @@
 # https://edotor.net/
 graph graphname {
 bgcolor=white  	#background color
-rankdir=LR 		#direction of graph, eg LR is Left-to-Right ,TB is Top-to-Bottom
+rankdir=TB 		#direction of graph, eg LR is Left-to-Right ,TB is Top-to-Bottom
 node [shape = box  style=filled fontcolor=white height=.37 fontname=Helvetica] #these effect everything below unless overridden by another "node[]" statement
 edge [color=black] #the edge is the lines between company/backbone/provider reseller
-
     node [color="#6c1494"] #we change the colour of each company, eg omicron is "red"
 "United Newsserver " --	"Elbracht"
 "Elbracht" -- "United Newsserver"
@@ -14,9 +13,8 @@ edge [color=black] #the edge is the lines between company/backbone/provider rese
 "Newscene " -- "Novia / HW Media" -- "Newscene" -- "Premium News"
  
     node [color="#3098d8"]
-"Giganews" --	"Giganews " -- "Giganews  "
-"Giganews " --	"Supernews"
-"Giganews  " --	"PowerUsenet\nRhinoNewsgroups\nUsenet.net"
+"Giganews " --	"Giganews" -- "PowerUsenet\nRhinoNewsgroups\nUsenet.net"
+"Giganews " -- "Supernews" -- "NewsGroupDirect "
 
     node [color="#368a8b"]
 "Usenet.Farm " -- {node[shape=hexagon]"Its Hosted"} -- {node[shape=hexagon]"Usenet.Farm"} -- "UsenetNews\nFrugalUsenet" #the "{node[shape=folder fontcolor=orange]"Usenet.Farm"}" is for marking something as NTD
@@ -59,18 +57,4 @@ node[fontcolor=white]
 "Base IP / HW Media" -- "SunnyUsenet"
 "Base IP / HW Media" -- "XLned"
 "XLned" -- "123Usenet\nExtremeUsenet\nMijnUsenet\nUsenet.pro\nUsenetBucket\nVordeligusnet"
-
-    node [shape = box style="filled" color=black] 
-"Company" -- "Backbone" -- "Provider" -- "Resellers"
-	node[shape=hexagon fillcolor=black] edge [style=invis]
-"NTD"  
-node[shape=box]
-"NTD" -- "DMCA"
-
-	node[shape=hexagon fillcolor=black fontcolor="#ffb700"] edge [style=invis]
-"NTD"  -- "DMCA" -- "NTD+DCMA"
-node[shape = box fontcolor=white] edge [style=invis]
-"Remastered by Catnicia"--"Last updated: October 15th 2021" -- "Forked from burwinch/usenet_tree"
-
-
 }
