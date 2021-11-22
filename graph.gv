@@ -1,10 +1,11 @@
 # https://edotor.net/
 graph graphname {
 bgcolor=white  	#background color
-rankdir=TB 		#direction of graph, eg LR is Left-to-Right ,TB is Top-to-Bottom
+rankdir=LR 		#direction of graph, eg LR is Left-to-Right ,TB is Top-to-Bottom
 node [shape = box  style=filled fontcolor=white height=.37 fontname=Helvetica] #these effect everything below unless overridden by another "node[]" statement
 edge [color=black] #the edge is the lines between company/backbone/provider reseller
-    node [color="#6c1494"] #we change the colour of each company, eg omicron is "red"
+
+node [color="#6c1494"] #we change the colour of each company, eg omicron is "red"
 "United Newsserver " --	"Elbracht"
 "Elbracht" -- "United Newsserver"
 "Elbracht" -- "Premium News "
@@ -57,4 +58,12 @@ node[fontcolor=white]
 "Base IP / HW Media" -- "SunnyUsenet"
 "Base IP / HW Media" -- "XLned"
 "XLned" -- "123Usenet\nExtremeUsenet\nMijnUsenet\nUsenet.pro\nUsenetBucket\nVordeligusnet"
+
+node [color=black shape=rect]
+"Company" -- "Backbone" -- "Provider" -- "Resellers"
+
+node [] edge [style=invis]
+"V2" --"Last Updated: Nov 22th 2021"  -- "forked from burwinch" -- "Remastered by Catnicia"
+
+
 }
