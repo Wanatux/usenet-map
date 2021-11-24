@@ -11,6 +11,7 @@ Got any suggestions\updates? feel free to email me @: hassonipulus@gmail.com
 
 ## How to update the graph / tree
 
+- Download and extract the [zip](https://github.com/hassonipulus/hassonipulus.github.io/releases/download/v1/v01.zip) from the Releases tab.
 - Make required changes in graph.gv.
   - You can use the web editor [Edotor](https://edotor.net/) or through some text editor.  
     (VS Code has a plugin to preview and edit)
