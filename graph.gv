@@ -1,27 +1,10 @@
 # https://edotor.net/
 graph graphname {
-bgcolor=white  	#background color
+bgcolor=gray  	#background color
 rankdir=LR 		#direction of graph, eg LR is Left-to-Right ,TB is Top-to-Bottom
-node [shape = box  style=filled fontcolor=white height=.37 fontname=Helvetica] #these effect everything below unless overridden by another "node[]" statement
-edge [color=black] #the edge is the lines between company/backbone/provider reseller
+node [shape = box  style=filled fontcolor=white height=.37 fontname=Arial] #these effect everything below unless overridden by another "node[]" statement
+edge [color=whitesmoke] #the edge is the lines between company/backbone/provider reseller
 
-node [color="#6c1494"] #we change the colour of each company, eg omicron is "red"
-"United Newsserver " --	"Elbracht"
-"Elbracht" -- "United Newsserver"
-"Elbracht" -- "Premium News "
-     
-    node [color="#ec2efa"]
-"Newscene " -- "Novia / HW Media" -- "Newscene" -- "Premium News"
- 
-    node [color="#3098d8"]
-"Giganews " --	"Giganews" -- "PowerUsenet\nRhinoNewsgroups\nUsenet.net"
-"Giganews " -- "Supernews" -- "NewsGroupDirect "
-
-    node [color="#368a8b"]
-"Usenet.Farm " -- {node[shape=hexagon]"Its Hosted"} -- {node[shape=hexagon]"Usenet.Farm"} -- "UsenetNews\nFrugalUsenet" #the "{node[shape=folder fontcolor=orange]"Usenet.Farm"}" is for marking something as NTD
- 
-    node [color="#f6b72d"]
-"Uzo Reto" -- {node[shape=hexagon]"ViperNews"} -- {node[shape=hexagon]"ViperNews "} -- " UsenetNews\nNovaUsenet"
  
     node [color="#2a7325"]
 "UsenetExpress" -- "UsenetExpress " -- "UsenetExpress  " -- "UsenetNews\nUsenetPrime\n UsenetFire\nThunderNews\n theCubeNet"
@@ -38,8 +21,27 @@ node [color="#6c1494"] #we change the colour of each company, eg omicron is "red
 "Abavia " -- "XS News / Xenna"
 "Abavia " -- "XS News"
 "XS News" -- "aEton\nBulknews\nDreamload\nGebruikhet\nI-Telligent\nNewsGrabber\nNewsXS\nSMS Usenet\nStingy Usenet\nUsenet.today\nUsenetAgency\nUsenetDiscount\nUsenetDiscounter.com\nUsenet-Server\nUseNight\nXS Usenet\nZ51"
+
+node [color="#6c1494"] #we change the colour of each company, eg omicron is "red"
+"United Newsserver " --	"Elbracht"
+"Elbracht" -- "United Newsserver"
+"Elbracht" -- "Premium News "
+       node [color="#ec2efa"]
+"Newscene " -- "Novia / HW Media" -- "Newscene" -- "Premium News"
  
-    node [color=red]
+
+    node [color="#368a8b"]
+"Usenet.Farm " -- {node[shape=hexagon]"Its Hosted"} -- {node[shape=hexagon]"Usenet.Farm"} -- "UsenetNews\nFrugalUsenet" #the "{node[shape=folder fontcolor=orange]"Usenet.Farm"}" is for marking something as NTD
+ 
+    node [color="#f6b72d"]
+"Uzo Reto" -- {node[shape=hexagon]"ViperNews"} -- {node[shape=hexagon]"ViperNews "} -- " UsenetNews\nNovaUsenet"
+
+
+ node [color="#3098d8"]
+"Giganews " --	"Giganews" -- "PowerUsenet\nRhinoNewsgroups\nUsenet.net"
+"Giganews " -- "Supernews" -- "NewsGroupDirect "
+  
+node [color=red]
 "Omicron" --  "Eweka Internet Services" -- {node[shape=hexagon] Eweka}
 "Omicron" -- "HW Media"
 "HW Media" -- "Astraweb"
@@ -63,7 +65,7 @@ node [color=black shape=rect]
 "Company" -- "Backbone" -- "Provider" -- "Resellers"
 
 node [] edge [style=invis]
-"V2" --"Last Updated: Nov 22th 2021"  -- "forked from burwinch" -- "Remastered by Catnicia"
+"V2" --"Last Updated: Nov 22th 2021"  -- "forked from burwinch" -- "Remastered by Catnip and Etherios"
 
 
 }
